@@ -1,48 +1,27 @@
+const button = document.querySelector("button");
+
+function questionsToEnter() {
+
+    let askName = prompt("What's your name?");
+    alert(`Hello! Nice to meet you ${askName}`)
+    let askAge = +prompt("What's your age?");
+    let askRegion = prompt("You're from LATAM? y/n");
 
 
-let ourPlanetName = "Earth";
-let currentUserName = "John";
+    if (askAge >= 18 && askRegion === "y") {
+        alert(`Great ${askName}! You can enter to the community! Welcome and enjoy!`);
+    } else {
+        if ( askAge >= 18 && askRegion === "n") {
+        alert(`Sorry ${askName}, you can't enter to the community.`);
+        }  else {
+            if (askAge < 18) {
+                alert(`Sorry ${askName}, you can't enter to the community.`);
+            } else {
+                alert("Please, put a valid value.");
+            }
+        }
+    }
 
-let x = 23;
-let y = 10;
+}
 
-let exponential = x**y;
-
-/*Exponential too*/
-console.log(Math.pow(y,2))
-console.log(exponential);
-
-/*modulus %*/
-console.log(x%y); 
-
-
-
-/**/
-let z = 10e5;
-
-console.log(z)
-
-
-let decimal1 = 0.3;
-let decimal2 = 0.2;
-
-let addingDecimal = decimal1 + decimal2;
-
-console.log(addingDecimal)
-
-/* test isNaN() global js function */
-let numOne = 200
-let numTwo = "2"
-
-let isOrNot = numOne / numTwo
-
-console.log(typeof(isOrNot))
-console.log(isNaN(isOrNot))
-/* test isNaN() global js function */
-
-let testInf = 10
-
-while (testInf != 15) {
-    testInf = testInf++
-    console.log(testInf);
-} 
+button.addEventListener("click", questionsToEnter);

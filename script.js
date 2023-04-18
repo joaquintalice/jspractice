@@ -7,15 +7,7 @@ function multiply(n1, n2) {
 }
 
 function capitalize(string) {
-
-    let convertString = string.toLowerCase();
-    let allTheString = convertString.slice(1);
-    let capitalLetter = convertString.slice(0, 1);
-    let capitalString = capitalLetter.toUpperCase();
-
-
-    return (`${capitalString}${allTheString}`)
-
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 function lastLetter(string) {

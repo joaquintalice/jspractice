@@ -1,27 +1,23 @@
-const button = document.querySelector("button");
+function add7(number) {
+    return number + 7;
+}
 
-function questionsToEnter() {
+function multiply(n1, n2) {
+    return n1 * n2;
+}
 
-    let askName = prompt("What's your name?");
-    alert(`Hello! Nice to meet you ${askName}`)
-    let askAge = +prompt("What's your age?");
-    let askRegion = prompt("You're from LATAM? y/n");
+function capitalize(string) {
+
+    let convertString = string.toLowerCase();
+    let allTheString = convertString.slice(1);
+    let capitalLetter = convertString.slice(0, 1);
+    let capitalString = capitalLetter.toUpperCase();
 
 
-    if (askAge >= 18 && askRegion === "y") {
-        alert(`Great ${askName}! You can enter to the community! Welcome and enjoy!`);
-    } else {
-        if ( askAge >= 18 && askRegion === "n") {
-        alert(`Sorry ${askName}, you can't enter to the community.`);
-        }  else {
-            if (askAge < 18) {
-                alert(`Sorry ${askName}, you can't enter to the community.`);
-            } else {
-                alert("Please, put a valid value.");
-            }
-        }
-    }
+    return (`${capitalString}${allTheString}`)
 
 }
 
-button.addEventListener("click", questionsToEnter);
+function lastLetter(string) {
+    return string.slice(-1);
+}
